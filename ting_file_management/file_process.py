@@ -1,6 +1,7 @@
 import sys
 from ting_file_management.file_management import txt_importer
 
+
 def process(path_file, instance):
     for itens in instance._data:
         if itens["nome_do_arquivo"] == path_file:
@@ -29,4 +30,3 @@ def file_metadata(instance, position):
         sys.stdout.write(str(metadata))
     except IndexError:
         sys.stderr.write("Posição inválida")
-
